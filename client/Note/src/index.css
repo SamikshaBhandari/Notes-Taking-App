@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.container {
+  padding: 20px;
+  max-width: 650px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.note-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.note-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.edit-btn {
+  color: #3498db;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: bold;
+}
+.delete-btn {
+  color: #e74c3c;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: bold;
+}
