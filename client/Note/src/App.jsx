@@ -7,7 +7,7 @@ function App() {
   const [editId, setEditId] = useState(null);
   const [search, setSearch] = useState('');
 
-  const API_URL = "http://localhost:4000/api/notes";
+  const API = "http://localhost:4000/api/notes";
 
   useEffect(() => {
     fetchNotes();
@@ -15,7 +15,7 @@ function App() {
 
   const fetchNotes = async () => {
     try {
-      const response = await axios.get(API_URL);
+      const response = await axios.get(API);
       setNotes(response.data || []);
     } catch (error) {
       console.error("Error fetching notes:", error);
@@ -26,10 +26,10 @@ function App() {
     e.preventDefault();
     try {
       if (editId) {
-        await axios.patch(`${API_URL}/${editId}`, formData);
+        await axios.patch(`${API}/${editId}`, formData);
         setEditId(null);
       } else {
-        await axios.post(API_URL, formData);
+        await axios.post(API, formData);
       }
       setFormData({ title: '', content: '' });
       fetchNotes();
@@ -41,7 +41,7 @@ function App() {
   const deleteNote = async (id) => {
     if (window.confirm("Are you sure you want to delete this note?")) {
       try {
-        await axios.delete(`${API_URL}/${id}`);
+        await axios.delete(`${API}/${id}`);
         fetchNotes();
       } catch (error) {
         console.error("Error deleting note:", error);
