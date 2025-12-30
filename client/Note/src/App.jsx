@@ -52,7 +52,7 @@ function App() {
   return (
     <div style={{ padding: '20px', maxWidth: '700px', margin: 'auto', fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif' }}>
       <header style={{ textAlign: 'center', marginBottom: '30px' }}>
-        <h1 style={{ color: '#2c3e50' }}> Smart Notes Manager</h1>
+        <h1 style={{ color: '#2c3e50' }}> Smart Notes Management</h1>
         <p style={{ color: '#7f8c8d' }}>Organize your thoughts efficiently</p>
       </header>
 
@@ -66,8 +66,8 @@ function App() {
         />
       </section>
 
-      <section style={{ background: '#ffffff', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', marginBottom: '35px' }}>
-        <h3 style={{ marginTop: '0', color: '#34495e' }}>{editId ? 'Edit Note' : 'Create New Note'}</h3>
+      <section style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', marginBottom: '35px' }}>
+        <h3 style={{ marginTop: '0', color: '#34495e' }}>{editId ? 'Edit Note' : 'Create a New Note'}</h3>
         <input 
           value={formData.title} 
           onChange={(e) => setFormData({...formData, title: e.target.value})}
@@ -103,7 +103,7 @@ function App() {
               <div style={{ display: 'flex', gap: '15px' }}>
                 <button 
                   onClick={() => {setEditId(note._id); setFormData({title: note.title, content: note.content})}} 
-                  style={{ background: 'none', border: 'none', color: '#3498db', cursor: 'pointer', fontWeight: 'bold' }}>
+                  style={{ background: 'none', border: 'none', color: 'skyblue', cursor: 'pointer', fontWeight: 'bold' }}>
                   Edit
                 </button>
                 <button 
